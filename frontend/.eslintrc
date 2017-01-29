@@ -1,0 +1,101 @@
+{
+	"root": true,
+	"env": {
+		"es6": true,
+		"node": true,
+		"browser": true
+	},
+	rules: {
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"arrow-body-style": [
+			"off"
+		],
+		"curly": [
+			"error",
+			"multi"
+		],
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"max-len": [
+			"off"
+		],
+		"new-cap": [
+			"error", {
+				"capIsNewExceptions": [
+					"Immutable.Record",
+					"Immutable.List",
+					"Immutable.Stack",
+					"Immutable.Map",
+					"Immutable.OrderedMap",
+					"Immutable.Set",
+					"Immutable.OrderedSet",
+					"ServerRecord"
+				]
+			}
+		],
+		"no-console": [
+			"off"
+		],
+		"no-underscore-dangle": [
+			"off"
+		],
+		"no-tabs": [
+			"off"
+		],
+		"consistent-return": [
+			"off"
+		],
+		"arrow-parens": [
+			"off"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"import/prefer-default-export": [
+			"off"
+		],
+		"react/jsx-indent": [
+			"error",
+			"tab"
+		],
+		"react/jsx-indent-props": [
+			"error",
+			"tab"
+		],
+		"react/prefer-stateless-function": [
+			"off"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"spaced-comment": [
+			"error",
+			"always",
+			{
+				"block": {
+					"exceptions": ["*"]
+				}
+			}
+		]
+	},
+	"extends": [ "airbnb", "plugin:import/warnings" ],
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
+	},
+}

@@ -1,0 +1,44 @@
+.transactions__table {
+	border: 1px solid #ccc;
+	/*padding: 10px;*/
+	margin: 0px 10px;
+}
+
+.transactions__header {
+	width: 100%;
+	font-weight: bold;
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+	margin-bottom: 2px;
+	padding: 10px 0px;
+	color: white;
+	background-color: black;
+}
+
+.transactions__row {
+	display: flex;
+	flex-direction: row;
+	background-color: #f9f9f9;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 10px 0px;
+	text-align: left;
+}
+
+.transactions__date {
+	width: 15%;
+	padding: 0px 7px;
+}
+.transactions__description {
+	width: 55%;
+	padding: 0px 7px;
+}
+.transactions__credit {
+	width: 15%;
+	padding: 0px 7px;
+}
+.transactions__debit {
+	width: 15%;
+	padding: 0px 7px;
+}

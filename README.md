@@ -13,3 +13,10 @@ An offline version of Mint for personal use. Download transactions as a .csv fil
 * Install frontend dependencies `cd frontend && npm install`
 * Start frontend `cd frontend && npm start`
 
+You should now be able to access the application at [http://localhost:3000](http://localhost:3000)
+
+### With Docker
+
+* Run `docker-compose build && docker-compose up`
+
+You should now be able to access the application at [http://localhost:3000](http://localhost:3000)

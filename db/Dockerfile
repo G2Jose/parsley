@@ -1,0 +1,3 @@
+FROM mongo:3.4.0
+EXPOSE 27017
+CMD mongod

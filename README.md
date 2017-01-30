@@ -4,6 +4,13 @@ An offline version of Mint for personal use. Download transactions as a .csv fil
 
 ## How to use
 
+### With Docker (recommended)
+
+* Replace `seed/data/transactions.csv` file with a file provided by your own bank. Ensure that it has a header row that looks like: 'date', 'description', 'credit', 'debit'
+* Run `docker-compose build && docker-compose up`
+
+You should now be able to access the application at [http://localhost:3000](http://localhost:3000)
+
 ### Without Docker
 
 * Replace `seed/data/transactions.csv` file with a file provided by your own bank. Ensure that it has a header row that looks like: 'date', 'description', 'credit', 'debit'
@@ -11,12 +18,6 @@ An offline version of Mint for personal use. Download transactions as a .csv fil
 * Seed elasticsearch with data by running `babel-node seed/seed.js`
 * Install frontend dependencies `cd frontend && npm install`
 * Start frontend `cd frontend && npm start`
-
-You should now be able to access the application at [http://localhost:3000](http://localhost:3000)
-
-### With Docker
-
-* Run `docker-compose build && docker-compose up`
 
 You should now be able to access the application at [http://localhost:3000](http://localhost:3000)
 

@@ -24,6 +24,7 @@ export default (props) => {
 				<div className="transactions__description">Description</div>
 				<div className="transactions__credit">Credit</div>
 				<div className="transactions__debit">Debit</div>
+				<div className="transactions__categories">Debit</div>
 			</div>
 			<div className="transactions__list">
 				{transactions && transactions.map((transaction, index) => {

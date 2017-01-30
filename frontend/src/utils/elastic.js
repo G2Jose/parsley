@@ -3,7 +3,7 @@ import elasticsearch from 'elasticsearch';
 const index = 'parsley';
 
 const elastic = new elasticsearch.Client({
-	host: '192.168.0.17:9200',
+	host: 'localhost:9200',
 });
 
 const getAll = (input = 'transaction') => {

@@ -3,7 +3,7 @@ const fs = require('fs');
 const elasticsearch = require('elasticsearch');
 
 const client = new elasticsearch.Client({
-  host: 'localhost:9200',
+  host: process.env.ELASTICSEARCHURL || 'localhost:9200',
 //   log: 'trace',
 });
 

@@ -1,17 +1,11 @@
 version: '2'
 services:
-  backend:
-    image: parsley-backend:latest
+  elasticsearch:
     build:
-      context: backend
+      context: elastic
       dockerfile: Dockerfile
-    environment:
-      - 'NODE_ENV=production'
-      - 'DB_URL=db'
     ports:
-      - 1337:1337
-    links:
-      - db
+      - 9200:9200
   frontend:
     image: parsley-frontend:latest
     build:
@@ -21,11 +15,15 @@ services:
       - 'NODE_ENV=production'
     ports:
       - 3000:3000
-  db:
-    restart: always
+  seed:
     build:
-      context: db
+      context: seed
       dockerfile: 'Dockerfile'
     ports:
       - '27017:27017'
-
+    links:
+     - elasticsearch
+    depends_on:
+     - elasticsearch
+    environment:
+     - 'ELASTICSEARCHURL=elasticsearch:9200'

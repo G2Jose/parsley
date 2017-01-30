@@ -24,4 +24,10 @@ You should now be able to access the application at [http://localhost:3000](http
 
 * If you receive a `500` error from elasticsearch, you may need to increase window size for search results. You can do so by running `curl -XPUT "http://localhost:9200/parsley/_settings" -d '{ "index" : { "max_result_window" : 500000 } }'`
 
+### Roadmap
+
+- Manual and automatic transaction categorization
+- Category views
+- More filters
+
 Contributors welcome

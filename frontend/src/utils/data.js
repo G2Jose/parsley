@@ -43,7 +43,24 @@ const summarize = (data) => {
 	});
 };
 
+const esToTransactions = (esResponse) => {
+	return esResponse.hits.hits.map((item) => ({
+		id: item.id,
+		...item._source,
+		date: new Date(item._source.date),
+	}));
+};
+
+const filter = (data, start = moment(new Date()).subtract(1, 'year').toDate(), end = (new Date())) => {
+	if (!data) return null;
+	return data.filter(item => {
+		return item.date >= start && item.date <= end;
+	});
+};
+
 export {
 	aggregateByMonth,
 	summarize,
+	esToTransactions,
+	filter,
 };

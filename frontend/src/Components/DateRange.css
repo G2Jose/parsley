@@ -1,0 +1,13 @@
+.date-range__start {
+	min-height: 36px;
+
+}
+
+.date-range__end {
+	min-height: 36px;
+
+}
+
+.date-range {
+	margin: 10px 10px;
+}
